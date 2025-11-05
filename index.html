@@ -1,0 +1,231 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Salon — Home</title>
+
+  <!-- Typography -->
+  
+  
+  
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="page-intro" aria-hidden="true">
+    <div class="intro-inner">
+      <span class="intro-name">Luxe Salon</span>
+    </div>
+  </div>
+
+  <header class="masthead">
+  <!-- NAVBAR -->
+  <nav class="nav" aria-label="Primary">
+    <div class="nav-inner">
+      <!-- Left: Logo -->
+      <a href="#" class="brand" aria-label="Salon Home">
+        <img src="assets/css/images/logo1.jpg" alt="Luxe Salon" class="brand-logo" loading="eager" decoding="async">
+      </a>
+
+      <!-- Center: Quick links (add ID!) -->
+      <ul class="nav-links" id="primary-menu" role="list">
+        <li><a href="#">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="stylists.html">Stylists</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+      </ul>
+
+      <!-- Right: Book Now button (hamburger is NOT inside this) -->
+      <div class="cta">
+        <a class="btn" href="#" aria-label="Book an appointment">Book Now</a>
+      </div>
+    </div>
+
+    <!-- Hamburger button lives directly under .nav (not inside .cta/.nav-inner) -->
+    <button class="nav-toggle" aria-controls="primary-menu" aria-expanded="false" aria-label="Open menu">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="eyebrow">Welcome</span>
+      <h1 class="headline">Love your hair. Every. Single. Visit.</h1>
+      <p class="subhead">From precision cuts to vivid color and blowouts, our stylists craft looks that fit your life and your vibe without the stress.</p>
+      <div class="hero-badges" aria-label="Highlights">
+        <div class="badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>4.9/5 Rating</div>
+        <div class="badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 11h5v-2h-4V7h-2v6Z"/></svg>5000+ Appointments</div>
+        <div class="badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Zm3.54 6.46-4.95 4.95-2.12-2.12-1.41 1.41 3.53 3.53 6.36-6.36Z"/></svg>Cruelty‑free products</div>
+      </div>
+      <div class="hero-cta">
+        <a class="btn btn-ghost" href="#services" aria-label="Explore our services">Explore More</a>
+        <a class="btn" href="contactus.html" aria-label="Book an appointment">Book Now</a>
+      </div>
+      <div class="hero-meta" aria-label="Quick info">
+        <span><strong>Hours:</strong> Tue–Sat</span>
+        <a href="tel:+10000000000" aria-label="Call us">Call: +1 (000) 000‑0000</a>
+        <a href="contactus.html#contact" aria-label="Get directions">123 Main St, Your City</a>
+      </div>
+    </div>
+    <div class="scroll-indicator" aria-hidden="true"></div>
+  </section>
+</header>
+
+
+  <!-- SERVICES SECTION (new layout part) -->
+  <section class="services" id="services">
+    <div class="services-inner">
+      <header class="section-head">
+        <h2 class="section-title">Our Core Services</h2>
+        <p class="section-sub">A few essentials we’re known for. Explore more on our Services page.</p>
+      </header>
+
+      <div class="services-grid">
+        <!-- Card 1 -->
+        <article class="service-card">
+          <figure class="service-media">
+            <img src="assets/css/images/hair1.jpg" alt="Cuts and Styling" loading="lazy" decoding="async">
+          </figure>
+          <div class="service-body">
+            <h3 class="service-title">Cuts &amp; Styling</h3>
+            <p class="service-text">Precision cuts, blowouts, and finish styling tailored to your face shape and routine.</p>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="service-card">
+          <figure class="service-media">
+            <img src="assets/css/images/hair2.jpg" alt="Colour Services" loading="lazy" decoding="async">
+          </figure>
+          <div class="service-body">
+            <h3 class="service-title">Colour Services</h3>
+            <p class="service-text">From glossy single-process to dimensional highlights and balayage with bond care.</p>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="service-card">
+          <figure class="service-media">
+            <img src="assets/css/images/hair3.jpg" alt="Texture and Smoothing" loading="lazy" decoding="async">
+          </figure>
+          <div class="service-body">
+            <h3 class="service-title">Texture &amp; Smoothing</h3>
+            <p class="service-text">Keratin smoothing, perms, and custom texture work for frizz control.</p>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="service-card">
+          <figure class="service-media">
+            <img src="assets/css/images/hair4.jpg" alt="Extensions" loading="lazy" decoding="async">
+          </figure>
+          <div class="service-body">
+            <h3 class="service-title">Extensions</h3>
+            <p class="service-text">certified methods for length and volume, it will be matched to your color and lifestyle for good natural results.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    window.addEventListener('load', function () {
+      setTimeout(function () {
+        document.body.classList.add('is-loaded');
+      }, 300); // small delay for a smoother feel
+    });
+  </script>
+  <script>
+  (function(){
+    const nav  = document.querySelector('.nav');
+    const btn  = document.querySelector('.nav-toggle');
+    const menu = document.getElementById('primary-menu');
+    if(!nav || !btn || !menu) return;
+
+    btn.addEventListener('click', function(){
+      const open = nav.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+
+    // Close when a link is clicked (nice for one-page)
+    menu.addEventListener('click', function(e){
+      if(e.target.closest('a')){
+        nav.classList.remove('is-open');
+        btn.setAttribute('aria-expanded','false');
+      }
+    });
+  })();
+</script>
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <!-- Brand / About -->
+    <div class="footer-col">
+      <img src="assets/css/images/logo1.jpg" alt="Luxe Salon" class="footer-logo" loading="lazy">
+      <div class="footer-social" aria-label="Social links">
+        <a class="social" href="#" aria-label="Instagram" rel="noopener">
+          <!-- Instagram icon -->
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.5 5.5 0 0 1 12 7.5zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5zM18 6.25a1.25 1.25 0 1 1-1.25 1.25A1.25 1.25 0 0 1 18 6.25z"/>
+          </svg>
+        </a>
+        <a class="social" href="#" aria-label="Facebook" rel="noopener">
+          <!-- Facebook icon -->
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M13.5 9H16l.5-3h-3V4.5c0-.9.3-1.5 1.6-1.5H16V0h-2.2C11.5 0 10 1.2 10 3.5V6H8v3h2v9h3.5V9z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h4 class="footer-head">Quick Links</h4>
+      <ul class="footer-list">
+        <li><a href="#">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="stylists.html">Stylists</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Legal -->
+    <div class="footer-col">
+      <h4 class="footer-head">Legal</h4>
+      <ul class="footer-list">
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Service</a></li>
+        <li><a href="cookies.html">Cookies Policy</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-col">
+      <h4 class="footer-head">Contact</h4>
+      <ul class="footer-list">
+        <li><a href="tel:+10000000000">+1 (000) 000-0000</a></li>
+        <li><a href="mailto:hello@luxesalon.com">hello@luxesalon.com</a></li>
+        <li><a href="#">123 Main St, Your City</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © <span id="year"></span> Luxe Salon. All rights reserved.
+  </div>
+</footer>
+
+<script>
+  // copyright year
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+  <script src="assets/js/consent.js"></script>
+</body>
+</html>

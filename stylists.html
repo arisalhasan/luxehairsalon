@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Luxe Salon — Stylists</title>
+
+  <!-- Typography -->
+  
+  
+  
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* Page-scoped styles for stylists row */
+    .team-row{
+      display:flex; gap:16px; align-items:stretch; justify-content:center;
+      flex-wrap:nowrap; overflow-x:auto; padding:4px;
+    }
+    .team-card{
+      position:relative; width:220px; flex:0 0 220px; /* five in a row on desktop */
+      margin:0; /* let the row handle spacing */
+    }
+    .team-card .service-media{
+      background: rgba(0,0,0,.35);
+      aspect-ratio: 3 / 4; /* portrait */
+      width: 100%;
+    }
+    .team-card .service-media img{
+      width:100%; height:100%;
+      object-fit: cover;
+      object-position: center top; /* prioritize faces */
+    }
+    /* Tighter typography to fit small cards */
+    .team-card .service-title{ font-size:1rem; margin-bottom:6px; }
+    .team-card .service-text{ font-size:.9rem; }
+    .team-card .service-body{ min-height:0; padding:12px 14px 14px; }
+    @media (max-width:1100px){
+      .team-card{ width:200px; flex-basis:200px; }
+    }
+    @media (max-width:640px){
+      .team-row{ gap:12px; }
+      .team-card{ width:180px; flex-basis:180px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Intro overlay to match theme -->
+  <div class="page-intro" aria-hidden="true">
+    <div class="intro-inner">
+      <span class="intro-name">Luxe Salon</span>
+    </div>
+  </div>
+
+  <header class="masthead">
+    <!-- NAVBAR (same structure as other pages) -->
+    <nav class="nav" aria-label="Primary">
+      <div class="nav-inner">
+        <!-- Left: Logo -->
+        <a href="index.html" class="brand" aria-label="Salon Home">
+          <img src="assets/css/images/logo1.jpg" alt="Luxe Salon" class="brand-logo" loading="eager" decoding="async">
+        </a>
+
+        <!-- Center: Quick links -->
+        <ul class="nav-links" id="primary-menu" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="stylists.html">Stylists</a></li>
+          <li><a href="contactus.html">Contact Us</a></li>
+        </ul>
+
+        <!-- Right: Book Now button -->
+        <div class="cta">
+          <a class="btn" href="#contact" aria-label="Book an appointment">Book Now</a>
+        </div>
+      </div>
+
+      <!-- Hamburger button -->
+      <button class="nav-toggle" aria-controls="primary-menu" aria-expanded="false" aria-label="Open menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-inner">
+        <span class="eyebrow">Team</span>
+        <h1 class="headline">Our Stylists</h1>
+        <p class="subhead">Meet the team behind the chairs specialists in color, cuts, texture, extensions and styling. We’ll match you with the right pro for your goals.</p>
+        <div class="hero-badges" aria-label="Highlights">
+          <div class="badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5h4v4H3zm7 0h4v4h-4zm7 0h4v4h-4zM3 10h4v4H3zm7 0h4v4h-4zm7 0h4v4h-4zM3 15h4v4H3zm7 0h4v4h-4zm7 0h4v4h-4z"/></svg>5 stylists</div>
+          <div class="badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>Specialists in color & cuts</div>
+        </div>
+        <div class="hero-cta">
+          <a class="btn btn-ghost" href="#team" aria-label="Meet our stylists">Meet the Team</a>
+        </div>
+        <div class="hero-meta" aria-label="Quick info">
+          <span><strong>New clients:</strong> Welcome</span>
+          <a href="tel:+10000000000" aria-label="Call us">Call: +1 (000) 000‑0000</a>
+          <a href="contactus.html#contact" aria-label="Get directions">123 Main St, Your City</a>
+        </div>
+      </div>
+      <div class="scroll-indicator" aria-hidden="true"></div>
+    </section>
+  </header>
+
+  <main id="team" tabindex="-1">
+    <!-- Team grid uses the same card styles as Services for visual consistency -->
+    <section class="services" aria-labelledby="team-title">
+      <div class="services-inner">
+        <header class="section-head">
+          <h2 id="team-title" class="section-title">Meet the Team</h2>
+          <p class="section-sub">Five talented stylists with specialized skills to help you reach your hair goals.</p>
+        </header>
+
+        <div class="team-row" role="list" aria-label="Stylists list">
+          <!-- Stylist 1 -->
+          <article class="service-card team-card" role="listitem">
+            <figure class="service-media">
+              <img src="assets/css/images/stylist1.jpg" alt="Amelia — Color Specialist" loading="lazy" decoding="async">
+            </figure>
+            <div class="service-body">
+              <h3 class="service-title">Amelia — Color Specialist</h3>
+              <p class="service-text">Dimensional color with bond care. Soft grow‑out and high shine.</p>
+            </div>
+          </article>
+
+          <!-- Stylist 2 -->
+          <article class="service-card team-card" role="listitem">
+            <figure class="service-media">
+              <img src="assets/css/images/stylist2.jpg" alt="Noah — Precision Cuts" loading="lazy" decoding="async">
+            </figure>
+            <div class="service-body">
+              <h3 class="service-title">Noah — Precision Cuts</h3>
+              <p class="service-text">Shags, bobs and face‑framing cuts tailored to your texture.</p>
+            </div>
+          </article>
+
+          <!-- Stylist 3 -->
+          <article class="service-card team-card" role="listitem">
+            <figure class="service-media">
+              <img src="assets/css/images/stylist3.jpg" alt="Sofia — Balayage & Highlights" loading="lazy" decoding="async">
+            </figure>
+            <div class="service-body">
+              <h3 class="service-title">Sofia — Balayage &amp; Highlights</h3>
+              <p class="service-text">Sun‑kissed blends and seamless transitions for natural brightness.</p>
+            </div>
+          </article>
+
+          <!-- Stylist 4 -->
+          <article class="service-card team-card" role="listitem">
+            <figure class="service-media">
+              <img src="assets/css/images/stylist4.jpg" alt="Liam — Extensions" loading="lazy" decoding="async">
+            </figure>
+            <div class="service-body">
+              <h3 class="service-title">Liam — Extensions</h3>
+              <p class="service-text">Hand‑tied & tape‑in extensions matched for length and volume.</p>
+            </div>
+          </article>
+
+          <!-- Stylist 5 -->
+          <article class="service-card team-card" role="listitem">
+            <figure class="service-media">
+              <img src="assets/css/images/stylist5.jpg" alt="Ava — Bridal & Styling" loading="lazy" decoding="async">
+            </figure>
+            <div class="service-body">
+              <h3 class="service-title">Ava — Bridal &amp; Styling</h3>
+              <p class="service-text">Polished blowouts, soft waves and special‑event updos.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (kept consistent) -->
+  <footer class="site-footer" id="contact">
+    <div class="footer-inner">
+      <!-- Brand / Social -->
+      <div class="footer-col">
+        <img src="assets/css/images/logo1.jpg" alt="Luxe Salon" class="footer-logo" loading="lazy">
+        <div class="footer-social" aria-label="Social links">
+          <a class="social" href="#" aria-label="Instagram" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.5 5.5 0 0 1 12 7.5zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5zM18 6.25a1.25 1.25 0 1 1-1.25 1.25A1.25 1.25 0 0 1 18 6.25z"/></svg>
+          </a>
+          <a class="social" href="#" aria-label="Facebook" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 9H16l.5-3h-3V4.5c0-.9.3-1.5 1.6-1.5H16V0h-2.2C11.5 0 10 1.2 10 3.5V6H8v3h2v9h3.5V9z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-col">
+        <h4 class="footer-head">Quick Links</h4>
+        <ul class="footer-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="stylists.html">Stylists</a></li>
+          <li><a href="contactus.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Legal -->
+      <div class="footer-col">
+      <h4 class="footer-head">Legal</h4>
+      <ul class="footer-list">
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Service</a></li>
+        <li><a href="cookies.html">Cookies Policy</a></li>
+      </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-col">
+        <h4 class="footer-head">Contact</h4>
+        <ul class="footer-list">
+          <li><a href="tel:+10000000000">+1 (000) 000-0000</a></li>
+          <li><a href="mailto:hello@luxesalon.com">hello@luxesalon.com</a></li>
+          <li><a href="#">123 Main St, Your City</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span id="year"></span> Luxe Salon. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- Scripts (same as other pages) -->
+  <script>
+    window.addEventListener('load', function () {
+      setTimeout(function () {
+        document.body.classList.add('is-loaded');
+      }, 300);
+    });
+  </script>
+  <script>
+  (function(){
+    const nav  = document.querySelector('.nav');
+    const btn  = document.querySelector('.nav-toggle');
+    const menu = document.getElementById('primary-menu');
+    if(!nav || !btn || !menu) return;
+
+    btn.addEventListener('click', function(){
+      const open = nav.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+
+    // Close when a link is clicked
+    menu.addEventListener('click', function(e){
+      if(e.target.closest('a')){
+        nav.classList.remove('is-open');
+        btn.setAttribute('aria-expanded','false');
+      }
+    });
+  })();
+  </script>
+  <!-- No extra JS needed for the static row layout -->
+  <script src="assets/js/consent.js"></script>
+</body>
+</html>
